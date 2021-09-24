@@ -30,6 +30,10 @@ export class ThemeService {
     this.setActiveTheme(light);
   }
 
+  toggleTheme(): void {
+    this.isDarkTheme() ? this.setLightTheme() : this.setDarkTheme();
+  }
+
   private setActiveTheme(theme: Theme): void {
     this.active = theme;
 

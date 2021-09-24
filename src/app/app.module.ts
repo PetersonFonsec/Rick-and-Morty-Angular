@@ -6,6 +6,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ButtonThemeModule } from './shared/components/button-theme/button-theme.module';
 import { MenuModule } from './shared/components/menu/menu.module';
 
 @NgModule({
@@ -16,6 +17,7 @@ import { MenuModule } from './shared/components/menu/menu.module';
     RouterModule,
     FontAwesomeModule,
     MenuModule,
+    ButtonThemeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
