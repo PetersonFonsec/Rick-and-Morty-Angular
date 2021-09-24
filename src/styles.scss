@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  //Colors
+  --primary: #78bdf2;
+  --secondary: #efeb47;
+  --text-color: #464646;
+  --text-color-contrast: #fff;
+  --background: #eff2eb;
+
+  //Grid
+  --grid: 1400px;
+
+  //Transition
+  --transition: 0.3s;
+
+  //Layers
+  --menu: 1;
+  --modal: 2;
+  --loading: 3;
+}
+
+app-root,
+body {
+  align-items: center;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1;
+  max-width: var(--grid);
+  padding: 32px 18px;
+  width: 100%;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
