@@ -1,0 +1,14 @@
+.button {
+  background-color: var(--primary);
+  color: var(--text-color-contrast);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 12px 14px;
+  transition: var(--transition) ease-in-out all;
+  width: 100%;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
