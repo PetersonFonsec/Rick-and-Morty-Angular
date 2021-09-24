@@ -1,0 +1,17 @@
+<app-form-search (search)="search($event)"></app-form-search>
+
+<section>
+  <app-list [loading]="loading" [showList]="!!episodes.length">
+    <li *ngFor="let episodes of episodes">
+      <app-card>
+        <p><strong>Name:</strong> {{ episodes.name }}</p>
+        <p><strong>Air date:</strong> {{ episodes.air_date }}</p>
+        <p><strong>Episode:</strong> {{ episodes.episode }}</p>
+      </app-card>
+    </li>
+    <ng-container emptyList>
+      Nenhum episodio encotrado com o termo
+      <strong>{{ nameEpisodes }}</strong>
+    </ng-container>
+  </app-list>
+</section>

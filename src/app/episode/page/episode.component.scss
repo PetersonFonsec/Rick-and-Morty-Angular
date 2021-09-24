@@ -1,0 +1,24 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 18px;
+}
+
+.emptyList {
+  margin-top: 24vh;
+  text-align: center;
+
+  &-title {
+    color: var(--text-color);
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  strong {
+    color: var(--primary);
+  }
+
+  svg {
+    fill: var(--primary);
+  }
+}
