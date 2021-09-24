@@ -1,0 +1,35 @@
+.card {
+  background: var(--background);
+  border: 1px solid rgba(158, 158, 158, 0.6);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &-thumb {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    width: 100%;
+
+    ::ng-deep {
+      p {
+        margin: 0;
+      }
+
+      p:not(:last-child) {
+        margin-bottom: 18px;
+      }
+    }
+
+    app-button {
+      display: block;
+      margin-top: auto;
+    }
+  }
+}
