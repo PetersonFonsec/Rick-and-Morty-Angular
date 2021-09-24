@@ -1,0 +1,18 @@
+<app-form-search (search)="search($event)"></app-form-search>
+
+<section>
+  <app-list [showList]="!!locations.length" [loading]="loading">
+    <li *ngFor="let location of locations">
+      <app-card>
+        <p><strong>Name:</strong> {{ location.name }}</p>
+        <p><strong>Type:</strong> {{ location.type }}</p>
+        <p><strong>Dimension:</strong> {{ location.dimension }}</p>
+      </app-card>
+    </li>
+
+    <ng-container emptyList>
+      Nenhum episodio encotrado com o termo
+      <strong>{{ locationName }}</strong>
+    </ng-container>
+  </app-list>
+</section>
