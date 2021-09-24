@@ -1,0 +1,27 @@
+@keyframes flipper {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: var(--loading);
+
+  svg {
+    animation: flipper 3s linear infinite;
+    fill: var(--primary);
+  }
+}
