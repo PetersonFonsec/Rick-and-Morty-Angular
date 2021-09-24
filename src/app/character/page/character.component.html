@@ -1,0 +1,20 @@
+<app-form-search (search)="search($event)"></app-form-search>
+
+<section>
+  <app-list [loading]="loading" [showList]="!!characters.length">
+    <li *ngFor="let character of characters">
+      <app-card-character
+        [src]="character.image"
+        [description]="character.name"
+      >
+        <p><strong>Name:</strong> {{ character.name }}</p>
+        <p><strong>status:</strong> {{ character.status }}</p>
+      </app-card-character>
+    </li>
+
+    <ng-container emptyList>
+      Nenhum personagem encotrado com o termo
+      <strong>{{ nameCharacter }}</strong>
+    </ng-container>
+  </app-list>
+</section>
