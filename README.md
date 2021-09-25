@@ -18,6 +18,10 @@ Outras funcionalidades demontrada nesse projeto são
 
 ## Para rodar o projeto
 
-instale as dependências e rode o comando
+Instale as dependências e rode o comando
 
 `npm run start`
+
+## O que é isso
+
+O projeto pode ser visualizado nesse [link](angular-rick-morty.surge.sh)
