@@ -1,27 +1,23 @@
-# RickMorty
+# Rick and Morty
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
+![Rick and Morty](https://repository-images.githubusercontent.com/120371205/b6740400-92d4-11ea-8a13-d5f6e0558e9b)
 
-## Development server
+## O que é isso
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Um projeto simples feito com angular consumindo uma api REST da [serie](http://rickandmortyapi.com), o projeto tem como objetivo demostrar algumas funcionalidades que o angular nos disponibiliza para trabalhar com rotas. Funcionalidades como:
 
-## Code scaffolding
+- Lazy load para carregar os componentes, serviços e moduloes programaticamente
+- Criar e consumir queryStrings
+- Transisão entre rotas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Outras funcionalidades demontrada nesse projeto são
 
-## Build
+- Como trabalhar com temas
+- Consumir apis REST`s
+- Criar e reaproveitar animações em angular
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Para rodar o projeto
 
-## Running unit tests
+instale as dependências e rode o comando
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+`npm run start`
