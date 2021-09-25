@@ -16,12 +16,10 @@ Outras funcionalidades demontrada nesse projeto são
 - Consumir apis REST`s
 - Criar e reaproveitar animações em angular
 
+O projeto pode ser visualizado nesse [link](angular-rick-morty.surge.sh)
+
 ## Para rodar o projeto
 
 Instale as dependências e rode o comando
 
 `npm run start`
-
-## O que é isso
-
-O projeto pode ser visualizado nesse [link](angular-rick-morty.surge.sh)
