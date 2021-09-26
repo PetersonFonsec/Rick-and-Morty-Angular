@@ -1,11 +1,13 @@
 import { HttpClient } from '@angular/common/http';
+import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
+@Injectable({ providedIn: 'root' })
 export class BaseService<TGetOne, TGetAll> {
   private urlApi = 'https://rickandmortyapi.com/api';
 
   protected constructor(
-    private readonly path: string,
+    @Inject('path') private readonly path: string,
     private readonly httpClient: HttpClient
   ) {
     this.urlApi += this.path;

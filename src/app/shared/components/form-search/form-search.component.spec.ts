@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormSearchComponent } from './form-search.component';
+import { FormSearchModule } from './form-search.module';
 
 describe('FormSearchComponent', () => {
   let component: FormSearchComponent;
@@ -8,7 +9,7 @@ describe('FormSearchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [FormSearchComponent],
+      imports: [FormSearchModule],
     }).compileComponents();
   });
 
