@@ -8,9 +8,8 @@ describe('ListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListComponent ]
-    })
-    .compileComponents();
+      declarations: [ListComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -21,5 +20,30 @@ describe('ListComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('(DOM) Should show loading when @Input loading is true', () => {
+    component.loading = true;
+    fixture.detectChanges();
+    const loading: HTMLElement =
+      fixture.nativeElement.querySelector('.loading');
+    expect(loading).toBeTruthy();
+  });
+
+  it('(DOM) Should show the list when @Input loading is false and showList is true', () => {
+    component.loading = false;
+    component.showList = true;
+    fixture.detectChanges();
+    const list: HTMLElement = fixture.nativeElement.querySelector('.list');
+    expect(list).toBeTruthy();
+  });
+
+  it('(DOM) Should show empty list mensage', () => {
+    component.loading = false;
+    component.showList = false;
+    fixture.detectChanges();
+    const emptyList: HTMLElement =
+      fixture.nativeElement.querySelector('.emptyList');
+    expect(emptyList).toBeTruthy();
   });
 });
