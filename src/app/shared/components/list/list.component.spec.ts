@@ -25,25 +25,47 @@ describe('ListComponent', () => {
   it('(DOM) Should show loading when @Input loading is true', () => {
     component.loading = true;
     fixture.detectChanges();
+
+    const list: HTMLElement = fixture.nativeElement.querySelector('.list');
+    const emptyList: HTMLElement =
+      fixture.nativeElement.querySelector('.emptyList');
     const loading: HTMLElement =
       fixture.nativeElement.querySelector('.loading');
+
     expect(loading).toBeTruthy();
+    expect(emptyList).toBeNull();
+    expect(list).toBeNull();
   });
 
-  it('(DOM) Should show the list when @Input loading is false and showList is true', () => {
+  it('(DOM) Should only show the list when @Input loading is false and showList is true', () => {
     component.loading = false;
     component.showList = true;
     fixture.detectChanges();
+
     const list: HTMLElement = fixture.nativeElement.querySelector('.list');
+    const emptyList: HTMLElement =
+      fixture.nativeElement.querySelector('.emptyList');
+    const loading: HTMLElement =
+      fixture.nativeElement.querySelector('.loading');
+
     expect(list).toBeTruthy();
+    expect(loading).toBeNull();
+    expect(emptyList).toBeNull();
   });
 
   it('(DOM) Should show empty list mensage', () => {
     component.loading = false;
     component.showList = false;
     fixture.detectChanges();
+
+    const list: HTMLElement = fixture.nativeElement.querySelector('.list');
+    const loading: HTMLElement =
+      fixture.nativeElement.querySelector('.loading');
     const emptyList: HTMLElement =
       fixture.nativeElement.querySelector('.emptyList');
+
     expect(emptyList).toBeTruthy();
+    expect(loading).toBeNull();
+    expect(list).toBeNull();
   });
 });
