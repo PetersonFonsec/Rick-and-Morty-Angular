@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonThemeModule } from './shared/components/button-theme/button-theme.module';
 import { MenuModule } from './shared/components/menu/menu.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { MenuModule } from './shared/components/menu/menu.module';
     FontAwesomeModule,
     MenuModule,
     ButtonThemeModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
