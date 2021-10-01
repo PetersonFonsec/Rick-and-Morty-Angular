@@ -4,7 +4,7 @@
   --secondary: #efeb47;
   --text-color: #464646;
   --text-color-contrast: #fff;
-  --background: #eff2eb;
+  --background: #fff;
 
   //Grid
   --grid: 1400px;
@@ -56,9 +56,4 @@ ul,
 ol {
   list-style: none;
   padding: 0;
-}
-
-html,
-body {
-  height: 100%;
 }

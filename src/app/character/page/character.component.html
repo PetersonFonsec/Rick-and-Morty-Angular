@@ -9,6 +9,8 @@
       >
         <p><strong>Name:</strong> {{ character.name }}</p>
         <p><strong>status:</strong> {{ character.status }}</p>
+
+        <app-button (clicked)="visualize(character)">Visualize</app-button>
       </app-card-character>
     </li>
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../components/modal/modal.component';
 import { Character } from '../services/character/character.model';
 import { CharacterService } from '../services/character/character.service';
 
@@ -12,7 +14,10 @@ export class CharacterComponent implements OnInit {
   nameCharacter = '';
   loading = true;
 
-  constructor(private characterService: CharacterService) {}
+  constructor(
+    private characterService: CharacterService,
+    private dialog: MatDialog
+  ) {}
 
   ngOnInit(): void {
     this.get();
@@ -40,5 +45,11 @@ export class CharacterComponent implements OnInit {
         this.characters = [];
       }
     );
+  }
+
+  visualize(character: Character) {
+    this.dialog.open(ModalComponent, {
+      data: character,
+    });
   }
 }
