@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../components/modal/modal.component';
 import { Episode } from '../services/episode/episode.model';
 import { EpisodeService } from '../services/episode/episode.service';
 
@@ -12,7 +14,10 @@ export class EpisodeComponent implements OnInit {
   nameEpisodes = '';
   loading = true;
 
-  constructor(private episodeService: EpisodeService) {}
+  constructor(
+    private episodeService: EpisodeService,
+    private dialog: MatDialog
+  ) {}
 
   ngOnInit(): void {
     this.get();
@@ -40,5 +45,9 @@ export class EpisodeComponent implements OnInit {
         this.episodes = [];
       }
     );
+  }
+
+  visualize(data: Episode): void {
+    this.dialog.open(ModalComponent, { data });
   }
 }

@@ -7,6 +7,7 @@
         <p><strong>Name:</strong> {{ location.name }}</p>
         <p><strong>Type:</strong> {{ location.type }}</p>
         <p><strong>Dimension:</strong> {{ location.dimension }}</p>
+        <app-button (clicked)="visualize(location)">Visualize</app-button>
       </app-card>
     </li>
 

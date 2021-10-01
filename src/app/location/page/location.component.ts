@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../components/modal/modal.component';
 import { Location } from '../services/location/location.model';
 import { LocationService } from '../services/location/location.service';
 
@@ -12,7 +14,10 @@ export class LocationComponent implements OnInit {
   locationName = '';
   loading = true;
 
-  constructor(private locationService: LocationService) {}
+  constructor(
+    private locationService: LocationService,
+    private dialog: MatDialog
+  ) {}
 
   ngOnInit(): void {
     this.get();
@@ -41,5 +46,9 @@ export class LocationComponent implements OnInit {
         this.locations = [];
       }
     );
+  }
+
+  visualize(data: Location): void {
+    this.dialog.open(ModalComponent, { data });
   }
 }
