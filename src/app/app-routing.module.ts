@@ -9,16 +9,25 @@ const routes: Routes = [
   },
   {
     path: 'character',
+    data: {
+      animation: 'CharacterPage',
+    },
     loadChildren: () =>
       import('./character/character.module').then((m) => m.CharacterModule),
   },
   {
     path: 'episode',
+    data: {
+      animation: 'EpisodePage',
+    },
     loadChildren: () =>
       import('./episode/episode.module').then((m) => m.EpisodeModule),
   },
   {
     path: 'location',
+    data: {
+      animation: 'LocationPage',
+    },
     loadChildren: () =>
       import('./location/location.module').then((m) => m.LocationModule),
   },
