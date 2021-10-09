@@ -18,7 +18,6 @@ import { ButtonModule } from '../shared/components/button/button.module';
   imports: [
     CommonModule,
     EpisodeRoutingModule,
-    FormSearchModule,
     HttpClientModule,
     ReactiveFormsModule,
     CardModule,
