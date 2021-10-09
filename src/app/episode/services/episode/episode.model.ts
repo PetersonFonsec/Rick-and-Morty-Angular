@@ -1,3 +1,5 @@
+import { Pagination } from 'src/app/shared/services/base/base.model';
+
 export interface Episode {
   id: number;
   name: string;
@@ -8,11 +10,6 @@ export interface Episode {
   created: string;
 }
 export interface EpisodeAll {
-  info: {
-    count: number;
-    pages: number;
-    next: null | string;
-    prev: null | string;
-  };
+  info: Pagination;
   results: Episode[];
 }

@@ -1,3 +1,5 @@
+import { Pagination } from 'src/app/shared/services/base/base.model';
+
 export interface Location {
   id: number;
   name: string;
@@ -9,11 +11,6 @@ export interface Location {
 }
 
 export interface LocationAll {
-  info: {
-    count: number;
-    pages: number;
-    next: null | string;
-    prev: null | string;
-  };
+  info: Pagination;
   results: Location[];
 }

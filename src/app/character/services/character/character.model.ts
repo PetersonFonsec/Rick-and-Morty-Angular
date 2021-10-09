@@ -1,3 +1,5 @@
+import { Pagination } from 'src/app/shared/services/base/base.model';
+
 export interface Character {
   id: number;
   name: string;
@@ -19,11 +21,6 @@ export interface Character {
   created: string;
 }
 export interface CharacterList {
-  info: {
-    count: number;
-    pages: number;
-    next: null | string;
-    prev: null | string;
-  };
+  info: Pagination;
   results: Character[];
 }
