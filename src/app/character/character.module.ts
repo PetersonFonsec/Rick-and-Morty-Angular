@@ -20,7 +20,6 @@ import { ModalComponent } from './components/modal/modal.component';
     CharacterRoutingModule,
     HttpClientModule,
     ButtonModule,
-    FormSearchModule,
     ListModule,
     MatDialogModule,
   ],
