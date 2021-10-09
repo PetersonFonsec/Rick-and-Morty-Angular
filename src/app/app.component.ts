@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import { RouteAnimation } from './shared/animations/transition-page';
 import { ThemeService } from './shared/services/theme/theme.service';
 
@@ -12,7 +12,11 @@ import { ThemeService } from './shared/services/theme/theme.service';
 export class AppComponent {
   title = 'rick-morty';
 
-  constructor(private themeService: ThemeService) {}
+  constructor(
+    private themeService: ThemeService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  ) {}
 
   toggleTheme() {
     this.themeService.toggleTheme();
@@ -20,5 +24,10 @@ export class AppComponent {
 
   prepareRoute(outlet: RouterOutlet) {
     return outlet?.activatedRouteData?.animation;
+  }
+
+  async search(name: string) {
+    const currentPage = this.router.url.split('?')[0];
+    this.router.navigate([currentPage], { queryParams: { name } });
   }
 }

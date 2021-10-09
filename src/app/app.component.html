@@ -1,9 +1,10 @@
 <main>
-  <app-button-theme (clicked)="toggleTheme()"></app-button-theme>
+  <app-form-search (search)="search($event)"></app-form-search>
 
   <div [@RouteAnimation]="prepareRoute(outlet)">
     <router-outlet #outlet="outlet"></router-outlet>
   </div>
 
   <app-menu></app-menu>
+  <app-button-theme (clicked)="toggleTheme()"></app-button-theme>
 </main>
