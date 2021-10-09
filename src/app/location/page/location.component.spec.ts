@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { LocationModule } from '../location.module';
-
 import { LocationComponent } from './location.component';
 
 describe('LocationComponent', () => {
@@ -9,7 +9,7 @@ describe('LocationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LocationModule],
+      imports: [LocationModule, RouterTestingModule],
     }).compileComponents();
   });
 
