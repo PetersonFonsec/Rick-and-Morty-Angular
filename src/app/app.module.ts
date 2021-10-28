@@ -10,6 +10,8 @@ import { ButtonThemeModule } from './shared/components/button-theme/button-theme
 import { MenuModule } from './shared/components/menu/menu.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormSearchModule } from './shared/components/form-search/form-search.module';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +24,8 @@ import { FormSearchModule } from './shared/components/form-search/form-search.mo
     ButtonThemeModule,
     BrowserAnimationsModule,
     FormSearchModule,
+    GraphQLModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
