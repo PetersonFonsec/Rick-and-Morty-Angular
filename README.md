@@ -16,7 +16,7 @@ Outras funcionalidades demontrada nesse projeto são
 - Consumir apis REST`s
 - Criar e reaproveitar animações em angular
 
-O projeto pode ser visualizado nesse [link](angular-rick-morty.surge.sh)
+O projeto pode ser visualizado nesse [link](http://angular-rick-morty.surge.sh)
 
 ## Para rodar o projeto
 
